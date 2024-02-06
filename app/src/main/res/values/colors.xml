@@ -2,5 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bg_color">#DFECDB</color>
+    <color name="lime">#DFECDB</color>
+    <color name="dark_green">#275718</color>
+    <color name="blue">#5D9CEC</color>
+    <color name="green">#61E757</color>
+    <color name="navy">#0E2849</color>
+    <color name="black_blue">#060E1E</color>
+    <color name="black_blue_light">#141922</color>
+    <color name="grey">#C8C9CB</color>
+    <color name="red">#ff5722</color>
+    <color name="bottom_nav_bg_color">@color/white</color>
+    <color name="activity_bg_color">@color/lime</color>
+    <color name="text_color">@color/white</color>
 </resources>

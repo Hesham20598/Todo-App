@@ -13,7 +13,7 @@ import com.example.todoapp.R
 @Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        changeStatusBarColor(R.color.bg_color)
+        changeStatusBarColor(R.color.activity_bg_color)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         Handler(mainLooper).postDelayed({

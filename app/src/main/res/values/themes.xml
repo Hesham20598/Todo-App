@@ -1,8 +1,32 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.TodoApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">#254875</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="floatingActionButtonStyle">@style/fab_style</item>
+    </style>
+
+    <style name="fab_style" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/fab_rounded</item>
+    </style>
+
+    <style name="fab_rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="background">@drawable/button_bg</item>
+    </style>
+
+    <style name="toolbar_title_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+    <style name="toolbar_style" parent="Base.ThemeOverlay.AppCompat">
+        <item name="android:colorControlNormal">@color/white</item>
     </style>
 
     <style name="Theme.TodoApp" parent="Base.Theme.TodoApp" />
