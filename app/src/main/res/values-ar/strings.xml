@@ -2,4 +2,14 @@
 <resources>
     <string name="to_do_list">قائمة المهام</string>
     <string name="add_a_task">أضف مهمة</string>
+    <string name="language">اللغة</string>
+    <string name="english">الإنجليزية</string>
+    <string name="mode">الوضع</string>
+    <string name="light">فاتح</string>
+    <string name="select_date">اختر التاريخ</string>
+    <string name="select_time">اختر الوقت</string>
+    <string name="title">العنوان</string>
+    <string name="description">الوصف</string>
+    <string name="add_new_task">Add New Task</string>
+
 </resources>
