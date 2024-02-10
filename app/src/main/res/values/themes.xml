@@ -17,6 +17,9 @@
         <item name="cornerSize">50%</item>
         <item name="background">@drawable/button_bg</item>
     </style>
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/black</item>
+    </style>
 
     <style name="toolbar_title_style">
         <item name="android:textStyle">bold</item>

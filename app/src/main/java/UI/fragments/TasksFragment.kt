@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.todoapp.R
+import com.example.todoapp.databinding.FragmentAddTaskBinding
 import com.example.todoapp.databinding.FragmentTasksBinding
+
+//import com.example.todoapp.databinding.FragmentTasksBinding
 
 class TasksFragment : Fragment() {
    private lateinit var binding:FragmentTasksBinding

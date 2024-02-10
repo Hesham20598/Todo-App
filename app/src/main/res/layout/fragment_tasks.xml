@@ -29,7 +29,7 @@
             android:background="@color/bottom_nav_bg_color"
             android:padding="10dp">
 
-            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/calendarView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,8 +38,7 @@
                 app:mcv_calendarMode="week"
                 app:mcv_dateTextAppearance="@style/CustomTextAppearance"
                 app:mcv_selectionColor="@color/blue"
-                app:mcv_showOtherDates="all"
-                tools:ignore="MissingClass" />
+                app:mcv_showOtherDates="all" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
