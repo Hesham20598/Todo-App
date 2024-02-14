@@ -68,6 +68,7 @@ class TaskDetailsActivity : AppCompatActivity() {
                     date = calendar.time
                 )
                 TasksDatabase.getInstance(this).getTasksDao().updateTask(newTask)
+                finish()
             }
         }
 

@@ -16,9 +16,7 @@ import com.example.todoapp.clearTime
 import com.example.todoapp.database.TasksDatabase
 import com.example.todoapp.database.models.Task
 import com.example.todoapp.databinding.FragmentTasksBinding
-import com.prolificinteractive.materialcalendarview.CalendarDay
 import java.util.Calendar
-import java.util.Date
 
 //import com.example.todoapp.databinding.FragmentTasksBinding
 
@@ -46,11 +44,11 @@ class TasksFragment : Fragment() {
         binding.rvTasks.adapter = adapter
         val list = TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
 
-        adapter.onTaskItemClickListener = object: TasksAdapter.OnTaskItemClidkListener{
+        adapter.onTaskItemClickListener = object : TasksAdapter.OnTaskItemClidkListener {
             override fun onTaskItemClick(task: Task) {
-                val intent = Intent(requireContext(),TaskDetailsActivity::class.java)
+                val intent = Intent(requireContext(), TaskDetailsActivity::class.java)
 //                val task = list.get(position)
-                intent.putExtra(Keys.SEND_TASK,task)
+                intent.putExtra(Keys.SEND_TASK, task)
                 startActivity(intent)
             }
 
@@ -91,6 +89,22 @@ class TasksFragment : Fragment() {
         adapter.updateData(updatedList)
     }
 
+    override fun onResume() {
+        /* this fun is used to view all tasks when I enter this fragment after some editing in TasksDetailsActivity
+        without it we need to refresh our data or we need to reselect the task icon in bottomNavView.
+        */
+
+        super.onResume()
+        getAllTasks()
+    }
+
+    private fun getAllTasks() {
+        val updatedList : List<Task> = TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
+        if (updatedList==null || updatedList.isEmpty()){
+            return
+        } else
+            adapter.updateData(updatedList)
+    }
 }
 
 
