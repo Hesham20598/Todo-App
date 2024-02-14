@@ -1,4 +1,4 @@
-package UI
+package com.example.todoapp.UI
 
 import android.annotation.SuppressLint
 import android.content.Intent
