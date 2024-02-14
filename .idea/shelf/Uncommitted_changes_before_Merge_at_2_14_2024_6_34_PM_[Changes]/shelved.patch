@@ -1,0 +1,18 @@
+Index: app/src/main/java/UI/fragments/TasksFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package UI.fragments\r\n\r\nimport android.os.Bundle\r\nimport androidx.fragment.app.Fragment\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport com.example.todoapp.R\r\nimport com.example.todoapp.databinding.FragmentAddTaskBinding\r\nimport com.example.todoapp.databinding.FragmentTasksBinding\r\n\r\n//import com.example.todoapp.databinding.FragmentTasksBinding\r\n\r\nclass TasksFragment : Fragment() {\r\n   private lateinit var binding:FragmentTasksBinding\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View {\r\n        // Inflate the layout for this fragment\r\n        binding = FragmentTasksBinding.inflate(inflater,container,false)\r\n        return binding.root\r\n    }\r\n\r\n    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {\r\n        super.onViewCreated(view, savedInstanceState)\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/UI/fragments/TasksFragment.kt b/app/src/main/java/UI/fragments/TasksFragment.kt
+--- a/app/src/main/java/UI/fragments/TasksFragment.kt	(revision 3d2f7c1f26dceb8a70a2b2b0e110886f7726a64f)
++++ b/app/src/main/java/UI/fragments/TasksFragment.kt	(date 1707928415486)
+@@ -18,7 +18,6 @@
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?
+     ): View {
+-        // Inflate the layout for this fragment
+         binding = FragmentTasksBinding.inflate(inflater,container,false)
+         return binding.root
+     }
