@@ -61,14 +61,13 @@ class TaskDetailsActivity : AppCompatActivity() {
             if (validateFeilds()) {
                 calendar.clearTime()
                 val newTask = Task(
+                    id = task?.id,
                     title = binding.content.title.text.toString(),
                     description = binding.content.description.text.toString(),
                     isDone = false,
                     date = calendar.time
                 )
-                TasksDatabase.getInstance(this).getTasksDao().deleteTask(task!!)
-                TasksDatabase.getInstance(this).getTasksDao().insertTask(newTask)
-                finish()
+                TasksDatabase.getInstance(this).getTasksDao().updateTask(newTask)
             }
         }
 
@@ -100,9 +99,9 @@ class TaskDetailsActivity : AppCompatActivity() {
         binding.content.selectDateTv.text = formatedDate
     }
 
-}
+    inline fun <reified T : Parcelable> Intent.parcelable(key: String): T? = when {
+        SDK_INT >= 33 -> getParcelableExtra(key, T::class.java)
+        else -> @Suppress("DEPRECATION") getParcelableExtra(key) as? T
+    }
 
-inline fun <reified T : Parcelable> Intent.parcelable(key: String): T? = when {
-    SDK_INT >= 33 -> getParcelableExtra(key, T::class.java)
-    else -> @Suppress("DEPRECATION") getParcelableExtra(key) as? T
 }

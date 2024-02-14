@@ -31,7 +31,7 @@ class TasksAdapter(
     override fun onBindViewHolder(holder: TasksViewHolder, position: Int) {
         val item = tasksList?.get(position) ?: return
         holder.bindinig.root.setOnClickListener {
-            onTaskItemClickListener?.onTaskItemClick(position)
+            onTaskItemClickListener?.onTaskItemClick(item)
         }
         holder.bind(item)
     }
@@ -64,7 +64,7 @@ class TasksAdapter(
     }
 
     interface OnTaskItemClidkListener {
-        fun onTaskItemClick(position: Int)
+        fun onTaskItemClick(task:Task)
     }
 
 }

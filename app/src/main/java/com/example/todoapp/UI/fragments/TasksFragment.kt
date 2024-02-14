@@ -14,6 +14,7 @@ import com.example.todoapp.UI.TaskDetailsActivity
 import com.example.todoapp.adapter.TasksAdapter
 import com.example.todoapp.clearTime
 import com.example.todoapp.database.TasksDatabase
+import com.example.todoapp.database.models.Task
 import com.example.todoapp.databinding.FragmentTasksBinding
 import com.prolificinteractive.materialcalendarview.CalendarDay
 import java.util.Calendar
@@ -46,9 +47,9 @@ class TasksFragment : Fragment() {
         val list = TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
 
         adapter.onTaskItemClickListener = object: TasksAdapter.OnTaskItemClidkListener{
-            override fun onTaskItemClick(position: Int) {
+            override fun onTaskItemClick(position: Int,task: Task) {
                 val intent = Intent(requireContext(),TaskDetailsActivity::class.java)
-                val task = list.get(position)
+//                val task = list.get(position)
                 intent.putExtra(Keys.SEND_TASK,task)
                 startActivity(intent)
             }
