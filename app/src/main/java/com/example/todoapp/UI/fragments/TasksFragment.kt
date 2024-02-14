@@ -47,7 +47,7 @@ class TasksFragment : Fragment() {
         val list = TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
 
         adapter.onTaskItemClickListener = object: TasksAdapter.OnTaskItemClidkListener{
-            override fun onTaskItemClick(position: Int,task: Task) {
+            override fun onTaskItemClick(task: Task) {
                 val intent = Intent(requireContext(),TaskDetailsActivity::class.java)
 //                val task = list.get(position)
                 intent.putExtra(Keys.SEND_TASK,task)
