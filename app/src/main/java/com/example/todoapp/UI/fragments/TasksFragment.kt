@@ -93,14 +93,14 @@ class TasksFragment : Fragment() {
         /* this fun is used to view all tasks when I enter this fragment after some editing in TasksDetailsActivity
         without it we need to refresh our data or we need to reselect the task icon in bottomNavView.
         */
-
         super.onResume()
         getAllTasks()
     }
 
     private fun getAllTasks() {
-        val updatedList : List<Task> = TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
-        if (updatedList==null || updatedList.isEmpty()){
+        val updatedList: List<Task> =
+            TasksDatabase.getInstance(requireContext()).getTasksDao().getAllTasks()
+        if (updatedList == null || updatedList.isEmpty()) {
             return
         } else
             adapter.updateData(updatedList)
